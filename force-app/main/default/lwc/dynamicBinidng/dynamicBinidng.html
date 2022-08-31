@@ -1,0 +1,27 @@
+<template>
+
+    <lightning-card title="Dynamic Binding" icon-name="custom:custom15">
+
+        <lightning-input type="text" name="name" label="Enter name" variant="standard" onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input type="text" name="email" label="Enter email" variant="standard" onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input type="password" name="password" label="Enter password" variant="standard"
+            onchange={handleChange}>
+        </lightning-input> <br>
+
+        <lightning-button type="submit" name="Submit" label="Submit" variant="brand" onclick={handleClick}>
+        </lightning-button>
+
+        <!-- Show Data on conditional rendering -->
+        <div if:true={showData}>
+            <br>
+            Your Name :: {name} <br>
+            Your Email :: {email} <br>
+            Your Password :: {password} <br>
+
+        </div>
+    </lightning-card>
+</template>

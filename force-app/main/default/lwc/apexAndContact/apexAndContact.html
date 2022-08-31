@@ -1,0 +1,15 @@
+<template>
+    <div class="slds-p-around_small">
+
+        <lightning-card title="Wire Apex (Get Contact Data) @wire" variant="standard">
+
+            <template if:true={viewData} for:each={viewData} for:item="result">
+
+                <lightning-card title={result.Name} key={result.Id} variant="narrow" icon-name="standard:contact">
+                </lightning-card>
+
+            </template>
+
+        </lightning-card>
+    </div>
+</template>

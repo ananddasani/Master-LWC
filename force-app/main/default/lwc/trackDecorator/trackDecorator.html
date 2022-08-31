@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="@Track Decorator" variant="standard">
+
+        <lightning-input label="First Name" placeholder="Enter Your First Name" name="firstName" type="text"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <lightning-input label="Last Name" placeholder="Enter Your Last Name" name="lastName" type="text"
+            onchange={handleChange}>
+        </lightning-input>
+
+        <!-- Fetch the values from the object fullName and display them  -->
+        <br>
+        <p>First Name :: <b>{fullName.firstName}</b></p>
+        <p>Last Name :: <b>{fullName.lastName}</b></p>
+
+    </lightning-card>
+</template>

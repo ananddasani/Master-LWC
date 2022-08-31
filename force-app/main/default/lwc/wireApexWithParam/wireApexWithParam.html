@@ -1,0 +1,18 @@
+<template>
+    <div class="slds-p-around_small">
+
+        <lightning-card title="Wire Apex With Params (Get Account Data) @wire()" variant="standard">
+
+            <lightning-input class="slds-p-around_small" type="text" name="name" placeholder="Enter account name"
+                label="Enter account name" onchange={handleSearch}>
+
+            </lightning-input>
+
+            <template if:true={viewData} for:each={viewData} for:item="result">
+                <lightning-card key={result.id} title={result.Name} variant="narrow" icon-name="standard:contact">
+                </lightning-card>
+            </template>
+
+        </lightning-card>
+    </div>
+</template>

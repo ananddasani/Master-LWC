@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Conditional Rendering" icon-name="custom:custom14">
+
+        <lightning-input type="checkbox" variant="standard" name="name" label="View Info of Developer"
+            onchange={handleChecked}>
+        </lightning-input>
+
+        <div if:true={checked}>
+            <br>
+            <p>Name of Dev :: Anand Dasani</p>
+            <p>Age :: 20</p>
+            <p>City ::: Porbandar</p>
+        </div>
+
+    </lightning-card>
+</template>
